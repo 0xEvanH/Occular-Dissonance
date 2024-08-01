@@ -1,0 +1,203 @@
+[remap]
+
+importer="scene"
+importer_version=1
+type="PackedScene"
+uid="uid://c66n3wnvq3vua"
+path="res://.godot/imported/map.glb-db21b48fb4e3dab82cb975222db3f01c.scn"
+
+[deps]
+
+source_file="res://Art/3D/Map/map.glb"
+dest_files=["res://.godot/imported/map.glb-db21b48fb4e3dab82cb975222db3f01c.scn"]
+
+[params]
+
+nodes/root_type=""
+nodes/root_name=""
+nodes/apply_root_scale=true
+nodes/root_scale=1.0
+meshes/ensure_tangents=true
+meshes/generate_lods=true
+meshes/create_shadow_meshes=true
+meshes/light_baking=1
+meshes/lightmap_texel_size=0.2
+meshes/force_disable_compression=false
+skins/use_named_skins=true
+animation/import=true
+animation/fps=30
+animation/trimming=false
+animation/remove_immutable_tracks=true
+import_script/path=""
+_subresources={
+"nodes": {
+"PATH:Cube": {
+"generate/physics": true,
+"physics/layer": 2,
+"physics/mask": 9,
+"physics/shape_type": 2
+},
+"PATH:Cube/Cube_001": {
+"generate/physics": true,
+"physics/shape_type": 3
+},
+"PATH:Cube_003": {
+"generate/physics": true,
+"physics/layer": 2,
+"physics/mask": 9,
+"physics/shape_type": 2
+},
+"PATH:Cube_003/Cube_029": {
+"generate/physics": true,
+"physics/layer": 2,
+"physics/mask": 9,
+"physics/shape_type": 3
+},
+"PATH:Cube_004": {
+"generate/physics": true,
+"physics/layer": 2,
+"physics/mask": 9,
+"physics/shape_type": 2
+},
+"PATH:Cube_006": {
+"generate/physics": true,
+"physics/layer": 2,
+"physics/mask": 9,
+"physics/shape_type": 2
+},
+"PATH:Cube_007": {
+"generate/physics": true,
+"physics/layer": 2,
+"physics/mask": 9,
+"physics/shape_type": 2
+},
+"PATH:Cube_008": {
+"generate/physics": true,
+"physics/layer": 2,
+"physics/mask": 9,
+"physics/shape_type": 2
+},
+"PATH:Cube_008/Cube_031": {
+"generate/physics": true,
+"physics/layer": 2,
+"physics/mask": 9,
+"physics/shape_type": 3
+},
+"PATH:Cube_009": {
+"generate/physics": true,
+"physics/layer": 2,
+"physics/mask": 9,
+"physics/shape_type": 2
+},
+"PATH:Cube_010": {
+"generate/physics": true,
+"physics/layer": 2,
+"physics/mask": 9,
+"physics/shape_type": 2
+},
+"PATH:Cube_010/Cube_033": {
+"generate/physics": true,
+"physics/layer": 2,
+"physics/mask": 9,
+"physics/shape_type": 3
+},
+"PATH:Cube_011": {
+"generate/physics": true,
+"physics/layer": 2,
+"physics/mask": 9,
+"physics/shape_type": 2
+},
+"PATH:Cube_012": {
+"generate/physics": true,
+"physics/layer": 2,
+"physics/mask": 9,
+"physics/shape_type": 2
+},
+"PATH:Cube_012/Cube_032": {
+"generate/physics": true,
+"physics/layer": 2,
+"physics/mask": 9,
+"physics/shape_type": 3
+},
+"PATH:Cube_013": {
+"generate/physics": true,
+"physics/layer": 2,
+"physics/mask": 9,
+"physics/shape_type": 2
+},
+"PATH:Cube_013/Cube_030": {
+"generate/physics": true,
+"physics/layer": 2,
+"physics/mask": 9,
+"physics/shape_type": 3
+},
+"PATH:Cube_014": {
+"generate/physics": true,
+"physics/layer": 2,
+"physics/mask": 9,
+"physics/shape_type": 2
+},
+"PATH:Cube_015": {
+"generate/physics": true,
+"physics/layer": 2,
+"physics/mask": 9,
+"physics/shape_type": 2
+},
+"PATH:Cube_016": {
+"generate/physics": true,
+"physics/layer": 2,
+"physics/mask": 9,
+"physics/shape_type": 2
+},
+"PATH:Cube_017": {
+"generate/physics": true,
+"physics/layer": 2,
+"physics/mask": 9,
+"physics/shape_type": 2
+},
+"PATH:Cube_018": {
+"generate/physics": true,
+"physics/layer": 2,
+"physics/mask": 9,
+"physics/shape_type": 2
+},
+"PATH:Cube_020": {
+"generate/physics": true,
+"physics/layer": 2,
+"physics/mask": 9,
+"physics/shape_type": 2
+},
+"PATH:Cube_021": {
+"generate/physics": true,
+"physics/layer": 2,
+"physics/mask": 9,
+"physics/shape_type": 2
+},
+"PATH:Cube_025": {
+"generate/physics": true,
+"physics/layer": 2,
+"physics/mask": 9,
+"physics/shape_type": 2
+},
+"PATH:Cube_026": {
+"generate/physics": true,
+"physics/layer": 2,
+"physics/mask": 9,
+"physics/shape_type": 2
+},
+"PATH:Cube_026/Cube_027": {
+"generate/physics": true,
+"physics/layer": 2,
+"physics/mask": 9,
+"physics/shape_type": 3
+},
+"PATH:Cylinder": {
+"import/skip_import": true
+},
+"PATH:Empty_001": {
+"import/skip_import": true
+}
+}
+}
+gltf/naming_version=1
+gltf/embedded_image_handling=1
