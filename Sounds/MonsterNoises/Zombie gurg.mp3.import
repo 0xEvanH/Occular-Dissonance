@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://ojlxf6142fky"
+path="res://.godot/imported/Zombie gurg.mp3-d6c6f852b498bd020d224358396c48af.mp3str"
+
+[deps]
+
+source_file="res://Sounds/MonsterNoises/Zombie gurg.mp3"
+dest_files=["res://.godot/imported/Zombie gurg.mp3-d6c6f852b498bd020d224358396c48af.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

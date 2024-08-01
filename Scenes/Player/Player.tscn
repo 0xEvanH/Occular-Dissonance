@@ -1,0 +1,270 @@
+[gd_scene load_steps=17 format=3 uid="uid://bv62w54qrva0f"]
+
+[ext_resource type="Script" path="res://Scenes/Player/Player.gd" id="1_ympl6"]
+[ext_resource type="PackedScene" uid="uid://dd1u388q5vqpr" path="res://Scenes/Player/player_ui.tscn" id="2_tvnjo"]
+[ext_resource type="PackedScene" uid="uid://ycyjnv1i83c3" path="res://Scenes/Player/PlayerObjects/player_wrench.tscn" id="3_ly7bs"]
+[ext_resource type="PackedScene" uid="uid://deew0xmchfyow" path="res://Scenes/Player/PlayerObjects/player_keycard_1.tscn" id="4_3nbnu"]
+[ext_resource type="PackedScene" uid="uid://drdiu16r5q3fj" path="res://Scenes/Player/PlayerObjects/player_keycard_2.tscn" id="5_jv1vg"]
+[ext_resource type="PackedScene" uid="uid://wlyicoc1vx3y" path="res://Scenes/Player/PlayerObjects/player_keycard_3.tscn" id="6_dwret"]
+[ext_resource type="AudioStream" uid="uid://bnbmyb7cnp3j2" path="res://Sounds/Hullfootstep fix.mp3" id="7_tmfqe"]
+[ext_resource type="AudioStream" uid="uid://bffjeuj1tmcl7" path="res://Sounds/Samples/Correct Key needed blach blachhh.mp3" id="8_c80t4"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_0gdax"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_jbk5h"]
+
+[sub_resource type="Animation" id="Animation_cs7y5"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("..:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0.6, 0)]
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("..:rotation:x")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("..:rotation:y")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/3/type = "bezier"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("..:rotation:z")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/4/type = "bezier"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("../../CanvasLayer/TextureRect:modulate:r")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/5/type = "bezier"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("../../CanvasLayer/TextureRect:modulate:g")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/6/type = "bezier"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("../../CanvasLayer/TextureRect:modulate:b")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/7/type = "bezier"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("../../CanvasLayer/TextureRect:modulate:a")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+
+[sub_resource type="Animation" id="Animation_hk0op"]
+resource_name = "bob"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("..:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3, 0.5, 0.8),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 0.6, 0), Vector3(0, 0.696868, 0), Vector3(0, 0.6, 0), Vector3(0, 0.69, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_44mkl"]
+resource_name = "hurt"
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../../CanvasLayer/TextureRect:modulate:r")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.2, 0.9)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../../CanvasLayer/TextureRect:modulate:g")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.2, 0.9)
+}
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../../CanvasLayer/TextureRect:modulate:b")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.2, 0.9)
+}
+tracks/3/type = "bezier"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("../../CanvasLayer/TextureRect:modulate:a")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 0.364706, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.2, 0.9)
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_f06t8"]
+_data = {
+"RESET": SubResource("Animation_cs7y5"),
+"bob": SubResource("Animation_hk0op"),
+"hurt": SubResource("Animation_44mkl")
+}
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_yfnob"]
+radius = 0.722148
+height = 2.4251
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_wjdaw"]
+
+[node name="Player" type="CharacterBody3D"]
+collision_mask = 0
+script = ExtResource("1_ympl6")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("CapsuleMesh_0gdax")
+
+[node name="body" type="CollisionShape3D" parent="."]
+shape = SubResource("CapsuleShape3D_jbk5h")
+
+[node name="HeadCheck" type="RayCast3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.201, 0)
+target_position = Vector3(0, 1, 0)
+
+[node name="Player_UI" parent="." instance=ExtResource("2_tvnjo")]
+
+[node name="rotation_helper" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.6, 0)
+
+[node name="Camera3D" type="Camera3D" parent="rotation_helper"]
+
+[node name="Grab" type="RayCast3D" parent="rotation_helper/Camera3D"]
+target_position = Vector3(0, 0, -2)
+collision_mask = 4
+
+[node name="Hand" type="Node3D" parent="rotation_helper/Camera3D"]
+transform = Transform3D(-0.331503, 0, 0.943454, 0, 1, 0, -0.943454, 0, -0.331503, -0.327029, -0.354999, -0.759405)
+
+[node name="PlayerWrench" parent="rotation_helper/Camera3D/Hand" instance=ExtResource("3_ly7bs")]
+transform = Transform3D(0.829564, 0, 0.558411, 0, 1, 0, -0.558411, 0, 0.829564, 0, 0, -0.252514)
+visible = false
+
+[node name="PlayerKeycard1" parent="rotation_helper/Camera3D/Hand" instance=ExtResource("4_3nbnu")]
+visible = false
+
+[node name="PlayerKeycard2" parent="rotation_helper/Camera3D/Hand" instance=ExtResource("5_jv1vg")]
+visible = false
+
+[node name="PlayerKeycard3" parent="rotation_helper/Camera3D/Hand" instance=ExtResource("6_dwret")]
+visible = false
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="rotation_helper/Camera3D"]
+libraries = {
+"": SubResource("AnimationLibrary_f06t8")
+}
+
+[node name="Damage_Taker" type="Area3D" parent="."]
+collision_layer = 256
+collision_mask = 8
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Damage_Taker"]
+shape = SubResource("CapsuleShape3D_yfnob")
+
+[node name="DmgTimer" type="Timer" parent="."]
+wait_time = 2.0
+one_shot = true
+
+[node name="ScrollTimer" type="Timer" parent="."]
+wait_time = 0.3
+one_shot = true
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer"]
+modulate = Color(1, 0, 0, 0)
+top_level = true
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("ViewportTexture_wjdaw")
+
+[node name="Footsteps" type="AudioStreamPlayer3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.880188, 0)
+stream = ExtResource("7_tmfqe")
+volume_db = 3.75
+
+[node name="Footstep_Timer" type="Timer" parent="Footsteps"]
+one_shot = true
+
+[node name="Correct" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("8_c80t4")
+
+[connection signal="body_entered" from="Damage_Taker" to="." method="_on_damage_taker_body_entered"]
+[connection signal="timeout" from="DmgTimer" to="." method="_on_dmg_timer_timeout"]
+[connection signal="timeout" from="ScrollTimer" to="." method="_on_scroll_timer_timeout"]

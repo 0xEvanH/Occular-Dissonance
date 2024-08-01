@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://deew0xmchfyow"]
+
+[ext_resource type="Texture2D" uid="uid://bv22c4u0wugy8" path="res://Art/Sprites/red_keycard.png" id="1_j1r75"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_fvirg"]
+size = Vector3(1, 0.1, 0.7)
+
+[node name="PlayerKeycard1" type="StaticBody3D"]
+collision_layer = 128
+collision_mask = 64
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("BoxShape3D_fvirg")
+
+[node name="Sprite3D" type="Sprite3D" parent="."]
+transform = Transform3D(-1.35724e-07, -3.105, -1.35724e-07, 0, -1.35724e-07, 3.105, -3.105, 1.35724e-07, 5.93268e-15, 0, 0.0169944, 0)
+texture_filter = 0
+texture = ExtResource("1_j1r75")

@@ -1,0 +1,155 @@
+[gd_scene load_steps=17 format=3 uid="uid://dfbcoo4a3ipjg"]
+
+[ext_resource type="Script" path="res://Scenes/Enemies/type_3 (gronk)/enemy_3.gd" id="1_eiwp6"]
+[ext_resource type="Texture2D" uid="uid://ry02wtkhspqc" path="res://Art/Sprites/Gronk_sheet.png" id="1_mb218"]
+[ext_resource type="Texture2D" uid="uid://g4honrywmyl0" path="res://Art/bloodstain.png" id="3_i3pmr"]
+[ext_resource type="Texture2D" uid="uid://now567hm6at2" path="res://Art/Sprites/murder3.png" id="4_rsqgd"]
+[ext_resource type="AudioStream" uid="uid://bw6g05jdqu351" path="res://Sounds/ImpactFleshy.mp3" id="5_bf0uc"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_50gcl"]
+radius = 1.80068
+height = 3.9682
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_mv5rg"]
+height = 6.24988
+radius = 4.72169
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_ktt78"]
+radius = 1.98422
+height = 5.31091
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xkla4"]
+atlas = ExtResource("1_mb218")
+region = Rect2(0, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kchlx"]
+atlas = ExtResource("1_mb218")
+region = Rect2(128, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p7s73"]
+atlas = ExtResource("1_mb218")
+region = Rect2(256, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n8ibk"]
+atlas = ExtResource("1_mb218")
+region = Rect2(384, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5moc4"]
+atlas = ExtResource("1_mb218")
+region = Rect2(512, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8x8pk"]
+atlas = ExtResource("1_mb218")
+region = Rect2(640, 0, 128, 128)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_6sduj"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xkla4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kchlx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p7s73")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n8ibk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5moc4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8x8pk")
+}],
+"loop": true,
+"name": &"default",
+"speed": 12.0
+}]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_sx1jy"]
+radius = 5.17512
+
+[node name="Enemy_3" type="CharacterBody3D" groups=["enemies"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.144725, 0)
+collision_layer = 8
+collision_mask = 258
+axis_lock_angular_x = true
+axis_lock_angular_y = true
+script = ExtResource("1_eiwp6")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.40071, 0)
+shape = SubResource("CapsuleShape3D_50gcl")
+
+[node name="NavigationAgent3D" type="NavigationAgent3D" parent="."]
+avoidance_enabled = true
+
+[node name="Player_Detect" type="Area3D" parent="."]
+collision_layer = 8
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Player_Detect"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.57946, 0)
+shape = SubResource("CylinderShape3D_mv5rg")
+
+[node name="Weapon_Detect" type="Area3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
+collision_layer = 8
+collision_mask = 32
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Weapon_Detect"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.941313, 0)
+shape = SubResource("CapsuleShape3D_ktt78")
+
+[node name="DmgTimer" type="Timer" parent="Weapon_Detect"]
+one_shot = true
+
+[node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="."]
+transform = Transform3D(4.64, 0, 0, 0, 4.64, 0, 0, 0, 4.64, 0.155737, 2.27452, -0.152223)
+billboard = 2
+texture_filter = 0
+sprite_frames = SubResource("SpriteFrames_6sduj")
+autoplay = "default"
+frame_progress = 0.187137
+
+[node name="Follow_Player" type="Area3D" parent="."]
+collision_layer = 8
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Follow_Player"]
+shape = SubResource("SphereShape3D_sx1jy")
+
+[node name="Death" type="Sprite3D" parent="."]
+transform = Transform3D(3.3, 0, 0, 0, 3.3, 0, 0, 0, 3.3, 0, 1.28026, 0)
+visible = false
+billboard = 2
+texture_filter = 0
+texture = ExtResource("3_i3pmr")
+
+[node name="DeathHuman" type="Sprite3D" parent="."]
+transform = Transform3D(3.3, 0, 0, 0, 3.3, 0, 0, 0, 3.3, 0, 0.5878, 0)
+visible = false
+billboard = 2
+texture_filter = 0
+texture = ExtResource("4_rsqgd")
+
+[node name="Hit" type="AudioStreamPlayer3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.50146, -0.888739)
+stream = ExtResource("5_bf0uc")
+volume_db = 3.75
+
+[node name="Gronk" type="AudioStreamPlayer3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.50146, -0.888739)
+stream = ExtResource("5_bf0uc")
+max_distance = 10.0
+
+[node name="Timer" type="Timer" parent="Gronk"]
+one_shot = true
+
+[connection signal="target_reached" from="NavigationAgent3D" to="." method="_on_navigation_agent_3d_target_reached"]
+[connection signal="velocity_computed" from="NavigationAgent3D" to="." method="_on_navigation_agent_3d_velocity_computed"]
+[connection signal="body_entered" from="Player_Detect" to="." method="_on_player_detect_body_entered"]
+[connection signal="body_entered" from="Weapon_Detect" to="." method="_on_weapon_detect_body_entered"]
+[connection signal="timeout" from="Weapon_Detect/DmgTimer" to="." method="_on_dmg_timer_timeout"]
+[connection signal="body_entered" from="Follow_Player" to="." method="_on_follow_player_body_entered"]
+[connection signal="body_exited" from="Follow_Player" to="." method="_on_follow_player_body_exited"]

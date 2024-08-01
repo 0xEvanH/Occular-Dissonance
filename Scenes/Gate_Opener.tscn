@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://bjqaypxlico0a"]
+
+[ext_resource type="PackedScene" uid="uid://jdr01qi8kjda" path="res://Art/3D/terminal_02.glb" id="1_dnbkx"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_2pr3u"]
+size = Vector3(1, 1.44336, 1)
+
+[node name="Gate_Opener" type="StaticBody3D"]
+collision_layer = 4
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.22168, 0)
+shape = SubResource("BoxShape3D_2pr3u")
+
+[node name="Sketchfab_Scene" parent="." instance=ExtResource("1_dnbkx")]
+transform = Transform3D(-0.01, 0, -1.50996e-09, 0, 0.01, 0, 1.50996e-09, 0, -0.01, 0.168899, -0.288, 0.316046)
+
+[node name="Label3D" type="Label3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+text = "NO KEYCARD"

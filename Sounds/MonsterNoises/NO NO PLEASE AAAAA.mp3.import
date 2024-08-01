@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bb57hp1gg5u5l"
+path="res://.godot/imported/NO NO PLEASE AAAAA.mp3-78dc8c264fada92303c0eefaede62916.mp3str"
+
+[deps]
+
+source_file="res://Sounds/MonsterNoises/NO NO PLEASE AAAAA.mp3"
+dest_files=["res://.godot/imported/NO NO PLEASE AAAAA.mp3-78dc8c264fada92303c0eefaede62916.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

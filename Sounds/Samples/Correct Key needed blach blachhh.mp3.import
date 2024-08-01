@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bffjeuj1tmcl7"
+path="res://.godot/imported/Correct Key needed blach blachhh.mp3-3e2b31d3c83601194761287c91752dd5.mp3str"
+
+[deps]
+
+source_file="res://Sounds/Samples/Correct Key needed blach blachhh.mp3"
+dest_files=["res://.godot/imported/Correct Key needed blach blachhh.mp3-3e2b31d3c83601194761287c91752dd5.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

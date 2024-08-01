@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=3 uid="uid://b0askqj4urg3p"]
+
+[ext_resource type="Texture2D" uid="uid://u141i5jtoyvj" path="res://Art/Sprites/wrench.png" id="1_sm8xl"]
+
+[node name="Wrench" type="Panel"]
+custom_minimum_size = Vector2(21, 21)
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 64.0
+offset_bottom = 64.0
+scale = Vector2(0.33, 0.33)
+texture = ExtResource("1_sm8xl")

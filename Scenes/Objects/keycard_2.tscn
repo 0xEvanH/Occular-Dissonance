@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://chp3vjxy28tdr"]
+
+[ext_resource type="Texture2D" uid="uid://b0aour828cfqr" path="res://Art/Sprites/blue_keycard.png" id="1_2go65"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_2g28v"]
+size = Vector3(1, 0.1, 0.7)
+
+[node name="Keycard2" type="StaticBody3D"]
+collision_layer = 4
+collision_mask = 0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("BoxShape3D_2g28v")
+
+[node name="Sprite3D" type="Sprite3D" parent="."]
+transform = Transform3D(-1.35724e-07, -3.105, -1.35724e-07, 0, -1.35724e-07, 3.105, -3.105, 1.35724e-07, 5.93268e-15, 0, 0.0169944, 0)
+texture_filter = 0
+texture = ExtResource("1_2go65")

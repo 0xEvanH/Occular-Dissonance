@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://bkirmprp826rn"]
+
+[ext_resource type="PackedScene" uid="uid://b56qx863e0tsc" path="res://Art/3D/weathered_wrench_game_model.glb" id="1_7w4uk"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_kcxp6"]
+size = Vector3(1.33569, 0.2, 0.285547)
+
+[node name="Wrench" type="StaticBody3D"]
+transform = Transform3D(0.864143, 0, 0.503246, 0, 1, 0, -0.503246, 0, 0.864143, 0, 0, -0.241163)
+collision_layer = 4
+collision_mask = 0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0443116, 0, -0.0427734)
+shape = SubResource("BoxShape3D_kcxp6")
+
+[node name="Sketchfab_Scene" parent="." instance=ExtResource("1_7w4uk")]
+transform = Transform3D(-2.96533e-06, 0.01, -4.37114e-10, -9.2923e-18, -4.37114e-10, -0.01, -0.01, -2.96533e-06, 1.29688e-13, -0.147725, 0, 0.0404429)

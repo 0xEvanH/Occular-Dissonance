@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://86br32qju0we"
+path="res://.godot/imported/EarthBound Giygas Whistle Synth Sound Effect.mp3-8c702be68e1595bd7f9ccc8928ee40d4.mp3str"
+
+[deps]
+
+source_file="res://Sounds/Samples/EarthBound Giygas Whistle Synth Sound Effect.mp3"
+dest_files=["res://.godot/imported/EarthBound Giygas Whistle Synth Sound Effect.mp3-8c702be68e1595bd7f9ccc8928ee40d4.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

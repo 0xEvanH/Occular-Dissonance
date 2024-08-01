@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cbacykjhcqmyj"
+path="res://.godot/imported/He1P M3 f1x m3 (morse code).mp3-56bc7c0a84f767626345bd3340e0f9ac.mp3str"
+
+[deps]
+
+source_file="res://Sounds/Ambience/He1P M3 f1x m3 (morse code).mp3"
+dest_files=["res://.godot/imported/He1P M3 f1x m3 (morse code).mp3-56bc7c0a84f767626345bd3340e0f9ac.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

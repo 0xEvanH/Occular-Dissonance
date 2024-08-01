@@ -1,0 +1,25 @@
+[gd_scene load_steps=3 format=3 uid="uid://cfh101ytnvcig"]
+
+[ext_resource type="Texture2D" uid="uid://cfuwpdbnkbfx8" path="res://Art/Sprites/border.png" id="1_sgd3l"]
+[ext_resource type="Texture2D" uid="uid://bv22c4u0wugy8" path="res://Art/Sprites/red_keycard.png" id="2_ls06j"]
+
+[node name="Keycard1" type="Panel"]
+custom_minimum_size = Vector2(21, 21)
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 64.0
+offset_bottom = 64.0
+scale = Vector2(0.33, 0.33)
+texture = ExtResource("1_sgd3l")
+
+[node name="TextureRect2" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 2.0
+offset_right = 34.0
+offset_bottom = 34.0
+scale = Vector2(0.535, 0.535)
+texture = ExtResource("2_ls06j")

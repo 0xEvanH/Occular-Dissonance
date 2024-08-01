@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://bu2nxc3gfjmls"]
+
+[ext_resource type="PackedScene" uid="uid://0eqaai55oarf" path="res://Art/3D/Med/sci-fi_medkit.glb" id="1_hb47j"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_tuwyy"]
+size = Vector3(0.42041, 1.86682, 1.04126)
+
+[node name="Medbay" type="StaticBody3D"]
+collision_layer = 4
+
+[node name="Sketchfab_Scene" parent="." instance=ExtResource("1_hb47j")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.116208, 1.19209e-07, -0.0200946)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0974121, 0.0588989, -0.0206299)
+shape = SubResource("BoxShape3D_tuwyy")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+light_color = Color(1, 0.427451, 0.356863, 1)

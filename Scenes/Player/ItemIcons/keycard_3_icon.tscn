@@ -1,0 +1,27 @@
+[gd_scene load_steps=3 format=3 uid="uid://bbu5y5b1vqkyw"]
+
+[ext_resource type="Texture2D" uid="uid://cfuwpdbnkbfx8" path="res://Art/Sprites/border.png" id="1_p15cw"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_3siad"]
+load_path = "res://.godot/imported/green_keycard.png-f65ad3a08df19005c99e5dce2a7b3282.ctex"
+
+[node name="Keycard3" type="Panel"]
+custom_minimum_size = Vector2(21, 21)
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 64.0
+offset_bottom = 64.0
+scale = Vector2(0.33, 0.33)
+texture = ExtResource("1_p15cw")
+
+[node name="TextureRect2" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 2.0
+offset_right = 34.0
+offset_bottom = 34.0
+scale = Vector2(0.535, 0.535)
+texture = SubResource("CompressedTexture2D_3siad")
