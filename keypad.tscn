@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://cwxdl2qg7rxia"]
+
+[ext_resource type="PackedScene" uid="uid://djo01vxjcxvac" path="res://Art/3D/box/keypad_security_shield.glb" id="1_3itow"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_71sek"]
+size = Vector3(1.04639, 1.2583, 1)
+
+[node name="Keypad" type="StaticBody3D"]
+collision_layer = 4
+
+[node name="Sketchfab_Scene" parent="." instance=ExtResource("1_3itow")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0034183, -1.19209e-07, -0.146022)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0231934, 0.12915, 0)
+shape = SubResource("BoxShape3D_71sek")
